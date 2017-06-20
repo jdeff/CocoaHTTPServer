@@ -1,13 +1,14 @@
+osx_image: xcode8.3
 language: objective-c
-
 script:
-  - xctool -project Samples/DynamicServer/DynamicServer.xcodeproj -scheme DynamicServer build
-  - xctool -project Samples/iPhoneHTTPServer/iPhoneHTTPServer.xcodeproj -scheme iPhoneHTTPServer -sdk iphonesimulator build
-  - xctool -project Samples/PasswdHTTPServer/PasswdHTTPServer.xcodeproj -scheme PasswdHTTPServer build
-  - xctool -project Samples/PostHTTPServer/PostHTTPServer.xcodeproj -scheme PostHTTPServer build
-  - xctool -project Samples/SecureHTTPServer/SecureHTTPServer.xcodeproj -scheme SecureHTTPServer build
-  - xctool -project Samples/SecureWebSocketServer/SecureWebSocketServer.xcodeproj -scheme SecureWebSocketServer build
-  - xctool -project Samples/SimpleFileUploadServer/SimpleFileUploadServer.xcodeproj -scheme SimpleFileUploadServer build
-  - xctool -project Samples/SimpleHTTPServer/SimpleHTTPServer.xcodeproj -scheme SimpleHTTPServer build
-  - xctool -project Samples/SimpleWebSocketServer/SimpleWebSocketServer.xcodeproj -scheme SimpleWebSocketServer build
-  - xctool -project Samples/WebDAVServer/WebDAVServer.xcodeproj -scheme WebDAVServer build
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme CocoaHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme DynamicServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme iPhoneHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme PasswdHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme PostHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme SecureHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme SecureWebSocketServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme SimpleFileUploadServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme SimpleHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme SimpleWebSocketServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme WebDAVServer
