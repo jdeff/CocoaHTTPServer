@@ -1,10 +1,9 @@
-#import "AppDelegate.h"
-#import "DDLog.h"
-#import "DDTTYLogger.h"
-#import "HTTPServer.h"
-#import "DAVConnection.h"
+@import CocoaHTTPServer;
+@import CocoaLumberjack;
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#import "AppDelegate.h"
+
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @implementation AppDelegate
 

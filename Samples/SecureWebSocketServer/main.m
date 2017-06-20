@@ -6,7 +6,7 @@
 //  Copyright 2011 Voalte. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 int main(int argc, char *argv[])
 {

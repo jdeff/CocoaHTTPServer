@@ -1,11 +1,11 @@
+@import CocoaLumberjack;
+
 #import "MyHTTPConnection.h"
-#import "HTTPLogging.h"
 #import "DDKeychain.h"
 
 // Log levels: off, error, warn, info, verbose
 // Other flags: trace
-static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
-
+static const int httpLogLevel = DDLogLevelWarning; // | DDLogLevelTrace;
 
 @implementation MyHTTPConnection
 

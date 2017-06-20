@@ -1,6 +1,6 @@
+@import CocoaHTTPServer;
+
 #import "HTTPResponseTest.h"
-#import "HTTPConnection.h"
-#import "HTTPLogging.h"
 
 // Does ARC support support GCD objects?
 // It does if the minimum deployment target is iOS 6+ or Mac OS X 8+

@@ -1,12 +1,11 @@
+@import CocoaHTTPServer;
+@import CocoaLumberjack;
+
 #import "AppDelegate.h"
-#import "HTTPServer.h"
 #import "MyHTTPConnection.h"
-#import "DDLog.h"
-#import "DDTTYLogger.h"
 
 // Log levels: off, error, warn, info, verbose
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
-
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @implementation AppDelegate
 

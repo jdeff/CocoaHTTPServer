@@ -1,15 +1,13 @@
+@import CocoaAsyncSocket;
+@import CocoaHTTPServer;
+@import CocoaLumberjack;
+
 #import "MyHTTPConnection.h"
-#import "HTTPMessage.h"
-#import "HTTPResponse.h"
-#import "HTTPDynamicFileResponse.h"
-#import "GCDAsyncSocket.h"
 #import "MyWebSocket.h"
-#import "HTTPLogging.h"
 
 // Log levels: off, error, warn, info, verbose
 // Other flags: trace
 static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
-
 
 @implementation MyHTTPConnection
 

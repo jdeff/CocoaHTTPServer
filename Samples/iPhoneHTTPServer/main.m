@@ -6,12 +6,10 @@
 //  Copyright 2010 __MyCompanyName__. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
 int main(int argc, char *argv[]) {
-    
     @autoreleasepool {
-        int retVal = UIApplicationMain(argc, argv, nil, nil);
-        return retVal;
+        return UIApplicationMain(argc, argv, nil, nil);
     }
 }

@@ -1,7 +1,6 @@
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @class HTTPServer;
-
 
 @interface SimpleWebSocketServerAppDelegate : NSObject <NSApplicationDelegate>
 {

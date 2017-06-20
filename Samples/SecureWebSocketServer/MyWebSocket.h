@@ -1,7 +1,9 @@
 @import Foundation;
 @import CocoaHTTPServer;
 
-@interface MyHTTPConnection : HTTPConnection
-
+@interface MyWebSocket : WebSocket
+{
+	
+}
 
 @end

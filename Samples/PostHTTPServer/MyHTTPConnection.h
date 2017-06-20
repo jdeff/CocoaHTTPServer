@@ -1,6 +1,5 @@
-#import <Cocoa/Cocoa.h>
-#import "HTTPConnection.h"
-
+@import Foundation;
+@import CocoaHTTPServer;
 
 @interface MyHTTPConnection : HTTPConnection
 

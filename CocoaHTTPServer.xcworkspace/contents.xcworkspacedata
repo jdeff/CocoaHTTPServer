@@ -7,4 +7,35 @@
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Examples">
+      <FileRef
+         location = "group:Samples/DynamicServer/DynamicServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/iPhoneHTTPServer/iPhoneHTTPServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/PostHTTPServer/PostHTTPServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/SecureHTTPServer/SecureHTTPServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/SecureWebSocketServer/SecureWebSocketServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/SimpleFileUploadServer/SimpleFileUploadServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/SimpleHTTPServer/SimpleHTTPServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/SimpleWebSocketServer/SimpleWebSocketServer.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:Samples/WebDAVServer/WebDAVServer.xcodeproj">
+      </FileRef>
+   </Group>
 </Workspace>

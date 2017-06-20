@@ -1,12 +1,11 @@
+@import CocoaHTTPServer;
+@import CocoaLumberjack;
+
 #import "AppDelegate.h"
-#import "HTTPServer.h"
 #import "MyHTTPConnection.h"
-#import "DDLog.h"
-#import "DDTTYLogger.h"
 
 // Log levels: off, error, warn, info, verbose
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
-
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @implementation AppDelegate
 
@@ -21,7 +20,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	
 	// Tell the server to broadcast its presence via Bonjour.
 	// This allows browsers such as Safari to automatically discover our service.
-//	[httpServer setType:@"_http._tcp."];
+	// [httpServer setType:@"_http._tcp."];
 	
 	// Note: Clicking the bonjour service in Safari won't work because Safari will use http and not https.
 	// Just change the url to https for proper access.

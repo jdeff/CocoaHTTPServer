@@ -1,13 +1,15 @@
-#import "AppDelegate.h"
-#import "HTTPServer.h"
-#import "DDLog.h"
-#import "DDTTYLogger.h"
+@import CocoaHTTPServer;
+@import CocoaLumberjack;
+
+#import "SecureWebSocketServerAppDelegate.h"
 #import "MyHTTPConnection.h"
+
 // Log levels: off, error, warn, info, verbose
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = DDLogLevelVerbose;
 
+@implementation SecureWebSocketServerAppDelegate
 
-@implementation AppDelegate
+@synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -15,8 +17,11 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	// To keep things simple and fast, we're just going to log to the Xcode console.
 	[DDLog addLogger:[DDTTYLogger sharedInstance]];
 	
-	// Initalize our http server
+	// Create server using our custom MyHTTPServer class
 	httpServer = [[HTTPServer alloc] init];
+	
+	// Tell server to use our custom MyHTTPConnection class.
+	[httpServer setConnectionClass:[MyHTTPConnection class]];
 	
 	// Tell the server to broadcast its presence via Bonjour.
 	// This allows browsers such as Safari to automatically discover our service.
@@ -25,17 +30,17 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 	// Normally there's no need to run our server on any specific port.
 	// Technologies like Bonjour allow clients to dynamically discover the server's port at runtime.
 	// However, for easy testing you may want force a certain port so you can just hit the refresh button.
-    //	[httpServer setPort:12345];
+	// [httpServer setPort:12345];
 	
-	// Serve files from the standard Sites folder
-	NSString *docRoot = [[[NSBundle mainBundle] pathForResource:@"index" ofType:@"html" inDirectory:@"web"] stringByDeletingLastPathComponent];
-	DDLogInfo(@"Setting document root: %@", docRoot);
+	// Serve files from our embedded Web folder
+	NSString *webPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"Web"];
+	DDLogInfo(@"Setting document root: %@", webPath);
 	
-	[httpServer setDocumentRoot:docRoot];
+	[httpServer setDocumentRoot:webPath];
 	
-	[httpServer setConnectionClass:[MyHTTPConnection class]];
+	// Start the server (and check for problems)
 	
-	NSError *error = nil;
+	NSError *error;
 	if(![httpServer start:&error])
 	{
 		DDLogError(@"Error starting HTTP Server: %@", error);

@@ -1,14 +1,7 @@
+@import CocoaHTTPServer;
+@import CocoaLumberjack;
 
 #import "MyHTTPConnection.h"
-#import "HTTPMessage.h"
-#import "HTTPDataResponse.h"
-#import "DDNumber.h"
-#import "HTTPLogging.h"
-
-#import "MultipartFormDataParser.h"
-#import "MultipartMessageHeaderField.h"
-#import "HTTPDynamicFileResponse.h"
-#import "HTTPFileResponse.h"
 
 // Log levels : off, error, warn, info, verbose
 // Other flags: trace

@@ -1,5 +1,4 @@
-
-#import "HTTPConnection.h"
+@import CocoaHTTPServer;
 
 @class MultipartFormDataParser;
 

@@ -1,7 +1,5 @@
 #import "MyHTTPConnection.h"
-#import "HTTPDynamicFileResponse.h"
 #import "HTTPResponseTest.h"
-#import "HTTPLogging.h"
 
 // Log levels: off, error, warn, info, verbose
 // Other flags: trace

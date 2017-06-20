@@ -1,5 +1,6 @@
-#import <Cocoa/Cocoa.h>
-@class   HTTPServer;
+@import Cocoa;
+
+@class HTTPServer;
 
 @interface AppDelegate : NSObject
 {
