@@ -20,8 +20,8 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 @implementation DAVResponse
 
 static void _AddPropertyResponse(NSString* itemPath, NSString* resourcePath, DAVProperties properties, NSMutableString* xmlString) {
-  CFStringRef escapedPath = CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (__bridge CFStringRef)resourcePath, NULL,
-                                                                    CFSTR("<&>?+"), kCFStringEncodingUTF8);
+  NSString *escapedPath = [resourcePath stringByAddingPercentEncodingWithAllowedCharacters:NSCharacterSet.alphanumericCharacterSet];
+
   if (escapedPath) {
     NSDictionary* attributes = [[NSFileManager defaultManager] attributesOfItemAtPath:itemPath error:NULL];
     BOOL isDirectory = [[attributes fileType] isEqualToString:NSFileTypeDirectory];
@@ -62,7 +62,6 @@ static void _AddPropertyResponse(NSString* itemPath, NSString* resourcePath, DAV
         [xmlString appendString:@"<D:status>HTTP/1.1 200 OK</D:status>"];
       [xmlString appendString:@"</D:propstat>"];
     [xmlString appendString:@"</D:response>\n"];
-    CFRelease(escapedPath);
   }
 }
 
@@ -199,7 +198,7 @@ static xmlNodePtr _XMLChildWithName(xmlNodePtr child, const xmlChar* name) {
         return nil;
       }
       NSString* destinationPath = [rootPath stringByAppendingPathComponent:
-        [[destination substringFromIndex:(range.location + range.length)] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        [[destination substringFromIndex:(range.location + range.length)] stringByRemovingPercentEncoding]];
       if (![destinationPath hasPrefix:rootPath] || [[NSFileManager defaultManager] fileExistsAtPath:destinationPath]) {
         return nil;
       }

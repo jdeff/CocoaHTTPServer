@@ -416,29 +416,29 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 }
 
 
-- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(int) length encoding:(int) encoding {
+- (int) numberOfBytesToLeavePendingWithData:(NSData*) data length:(NSUInteger) length encoding:(int) encoding {
 	// If we have BASE64 or Quoted-Printable encoded data, we have to be sure
 	// we don't break the format.
 	int sizeToLeavePending = 0;
-	
+
 	if( encoding == contentTransferEncoding_base64 ) {	
 		char* bytes = (char*) data.bytes;
 		int i;
-		for( i = length - 1; i > 0; i++ ) {
+		for( i = (int)length - 1; i > 0; i++ ) {
 			if( * (uint16_t*) (bytes + i) == 0x0A0D ) {
 				break;
 			}
 		}
 		// now we've got to be sure that the length of passed data since last line
 		// is multiplier of 4.
-		sizeToLeavePending = (length - i) & ~0x11; // size to leave pending = length-i - (length-i) %4;
+		sizeToLeavePending = ((int)length - i) & ~0x11; // size to leave pending = length-i - (length-i) %4;
 		return sizeToLeavePending;
 	}
 	
 	if( encoding == contentTransferEncoding_quotedPrintable ) {
 		// we don't pass more less then 3 bytes anyway.
 		if( length <= 2 ) 
-			return length;
+			return (int)length;
 		// check the last bytes to be start of encoded symbol.
 		const char* bytes = data.bytes + length - 2;
 		if( bytes[0] == '=' )

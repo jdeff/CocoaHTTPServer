@@ -11,7 +11,7 @@
   #endif
 #else
   #if MAC_OS_X_VERSION_MIN_REQUIRED >= 1060 // Mac OS X 10.6
-    #define IMPLEMENTED_PROTOCOLS <NSNetServiceDelegate>
+    #define IMPLEMENTED_PROTOCOLS <GCDAsyncSocketDelegate, NSNetServiceDelegate>
   #else
     #define IMPLEMENTED_PROTOCOLS <GCDAsyncSocketDelegate>
   #endif
