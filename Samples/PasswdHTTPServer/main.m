@@ -6,7 +6,7 @@
 //  Copyright Deusty Designs, LLC. 2009. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 int main(int argc, char *argv[])
 {

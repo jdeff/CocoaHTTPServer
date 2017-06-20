@@ -1,5 +1,4 @@
 #import "MyHTTPConnection.h"
-#import "HTTPLogging.h"
 
 // Log levels : off, error, warn, info, verbose
 // Other flags: trace

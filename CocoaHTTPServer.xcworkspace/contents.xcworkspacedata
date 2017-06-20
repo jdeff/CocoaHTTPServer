@@ -17,6 +17,9 @@
          location = "group:Samples/iPhoneHTTPServer/iPhoneHTTPServer.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Samples/PasswdHTTPServer/PasswdHTTPServer.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Samples/PostHTTPServer/PostHTTPServer.xcodeproj">
       </FileRef>
       <FileRef

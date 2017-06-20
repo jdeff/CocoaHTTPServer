@@ -32,6 +32,10 @@ abstract_target 'OSX Examples' do
     project 'Samples/DynamicServer/DynamicServer.xcodeproj'
   end
 
+  target 'PasswdHTTPServer' do
+    project 'Samples/PasswdHTTPServer/PasswdHTTPServer.xcodeproj'
+  end
+
   target 'PostHTTPServer' do
     project 'Samples/PostHTTPServer/PostHTTPServer.xcodeproj'
   end
