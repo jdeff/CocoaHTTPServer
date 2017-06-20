@@ -13,8 +13,8 @@ target 'CocoaHTTPServer' do
 
   platform :ios, IOS_VERSION
 
-  pod 'CocoaLumberjack'
-  pod 'CocoaAsyncSocket'
+  pod 'CocoaAsyncSocket', '~> 7.6'
+  pod 'CocoaLumberjack', '~> 3.2'
 end
 
 # Example Projects
