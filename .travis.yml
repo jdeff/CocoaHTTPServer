@@ -3,7 +3,7 @@ language: objective-c
 script:
   - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme CocoaHTTPServer
   - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme DynamicServer
-  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme iPhoneHTTPServer
+  - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme iPhoneHTTPServer -sdk iphonesimulator
   - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme PasswdHTTPServer
   - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme PostHTTPServer
   - xcodebuild build -workspace CocoaHTTPServer.xcworkspace -scheme SecureHTTPServer
