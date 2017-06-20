@@ -4,3 +4,6 @@
 *.mode2v3
 xcuserdata
 *~
+
+Pods
+Podfile.lock
