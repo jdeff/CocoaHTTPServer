@@ -1,6 +1,6 @@
-#import <Foundation/Foundation.h>
-#import "HTTPResponse.h"
+@import Foundation;
 
+#import "HTTPResponse.h"
 
 @interface HTTPRedirectResponse : NSObject <HTTPResponse>
 {

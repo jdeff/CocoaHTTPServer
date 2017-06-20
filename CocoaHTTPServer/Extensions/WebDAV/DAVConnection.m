@@ -1,11 +1,11 @@
 #import "DAVConnection.h"
-#import "HTTPMessage.h"
-#import "HTTPFileResponse.h"
-#import "HTTPAsyncFileResponse.h"
-#import "PUTResponse.h"
-#import "DELETEResponse.h"
 #import "DAVResponse.h"
+#import "DELETEResponse.h"
+#import "HTTPAsyncFileResponse.h"
+#import "HTTPFileResponse.h"
 #import "HTTPLogging.h"
+#import "HTTPMessage.h"
+#import "PUTResponse.h"
 
 #define HTTP_BODY_MAX_MEMORY_SIZE (1024 * 1024)
 #define HTTP_ASYNC_FILE_RESPONSE_THRESHOLD (16 * 1024 * 1024)

@@ -1,19 +1,19 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import CocoaAsyncSocket;
 
-@class GCDAsyncSocket;
 @class WebSocket;
 
 #if TARGET_OS_IPHONE
   #if __IPHONE_OS_VERSION_MIN_REQUIRED >= 40000 // iPhone 4.0
-    #define IMPLEMENTED_PROTOCOLS <NSNetServiceDelegate>
+    #define IMPLEMENTED_PROTOCOLS <GCDAsyncSocketDelegate, NSNetServiceDelegate>
   #else
-    #define IMPLEMENTED_PROTOCOLS 
+    #define IMPLEMENTED_PROTOCOLS <GCDAsyncSocketDelegate>
   #endif
 #else
   #if MAC_OS_X_VERSION_MIN_REQUIRED >= 1060 // Mac OS X 10.6
     #define IMPLEMENTED_PROTOCOLS <NSNetServiceDelegate>
   #else
-    #define IMPLEMENTED_PROTOCOLS 
+    #define IMPLEMENTED_PROTOCOLS <GCDAsyncSocketDelegate>
   #endif
 #endif
 

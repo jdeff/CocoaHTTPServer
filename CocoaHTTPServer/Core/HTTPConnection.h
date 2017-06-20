@@ -1,11 +1,10 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
+@import CocoaAsyncSocket;
 
-@class GCDAsyncSocket;
 @class HTTPMessage;
 @class HTTPServer;
 @class WebSocket;
 @protocol HTTPResponse;
-
 
 #define HTTPConnectionDidDieNotification  @"HTTPConnectionDidDie"
 
@@ -33,7 +32,7 @@
 #pragma mark -
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@interface HTTPConnection : NSObject
+@interface HTTPConnection : NSObject<GCDAsyncSocketDelegate>
 {
 	dispatch_queue_t connectionQueue;
 	GCDAsyncSocket *asyncSocket;

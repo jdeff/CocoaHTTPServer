@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6776F84D7E6B3E9394D9E92F /* libPods-CocoaHTTPServer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E593B04D2A18629E5FD988C1 /* libPods-CocoaHTTPServer.a */; };
 		ABA26F601EF97F9800197F93 /* DAVConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA26F571EF97F8900197F93 /* DAVConnection.h */; };
 		ABA26F611EF97F9800197F93 /* DAVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA26F581EF97F8900197F93 /* DAVConnection.m */; };
 		ABA26F621EF97F9800197F93 /* DAVResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = ABA26F591EF97F8900197F93 /* DAVResponse.h */; };
@@ -54,9 +53,11 @@
 		ABA26F8B1EF97FB200197F93 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA26F541EF97F8900197F93 /* WebSocket.m */; };
 		ABB3873D1EF9830F007C6F04 /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3873C1EF98301007C6F04 /* libxml2.2.tbd */; };
 		ABB3873F1EF98367007C6F04 /* CocoaHTTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3873E1EF98367007C6F04 /* CocoaHTTPServer.h */; };
+		DAB39D78A90B8F1E626F6D40 /* Pods_CocoaHTTPServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56BB0393975416BBBFFB2185 /* Pods_CocoaHTTPServer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56BB0393975416BBBFFB2185 /* Pods_CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F07C56A25A7B2B89E276AF6 /* Pods-CocoaHTTPServer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaHTTPServer.release.xcconfig"; path = "../Pods/Target Support Files/Pods-CocoaHTTPServer/Pods-CocoaHTTPServer.release.xcconfig"; sourceTree = "<group>"; };
 		ABA26F2B1EF97F6200197F93 /* CocoaHTTPServer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaHTTPServer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABA26F2F1EF97F8900197F93 /* DDData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		ABA26F5F1EF97F8900197F93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB3873C1EF98301007C6F04 /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
 		ABB3873E1EF98367007C6F04 /* CocoaHTTPServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaHTTPServer.h; sourceTree = "<group>"; };
-		E593B04D2A18629E5FD988C1 /* libPods-CocoaHTTPServer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CocoaHTTPServer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7D14B7F3329387C8D98239E /* Pods-CocoaHTTPServer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CocoaHTTPServer.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-CocoaHTTPServer/Pods-CocoaHTTPServer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6776F84D7E6B3E9394D9E92F /* libPods-CocoaHTTPServer.a in Frameworks */,
 				ABB3873D1EF9830F007C6F04 /* libxml2.2.tbd in Frameworks */,
+				DAB39D78A90B8F1E626F6D40 /* Pods_CocoaHTTPServer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				ABB3873C1EF98301007C6F04 /* libxml2.2.tbd */,
-				E593B04D2A18629E5FD988C1 /* libPods-CocoaHTTPServer.a */,
+				56BB0393975416BBBFFB2185 /* Pods_CocoaHTTPServer.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

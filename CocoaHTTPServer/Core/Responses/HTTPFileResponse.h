@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
+
 #import "HTTPResponse.h"
 
 @class HTTPConnection;
-
 
 @interface HTTPFileResponse : NSObject <HTTPResponse>
 {

@@ -1,5 +1,5 @@
-#import "PUTResponse.h"
 #import "HTTPLogging.h"
+#import "PUTResponse.h"
 
 // HTTP methods: http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html
 // HTTP headers: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html

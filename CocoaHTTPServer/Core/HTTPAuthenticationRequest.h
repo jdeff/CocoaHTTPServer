@@ -1,8 +1,8 @@
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #if TARGET_OS_IPHONE
   // Note: You may need to add the CFNetwork Framework to your project
-  #import <CFNetwork/CFNetwork.h>
+  @import CFNetwork;
 #endif
 
 @class HTTPMessage;
